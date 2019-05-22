@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="16dp"
+	tools:context=".MainActivity">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="前排广告："
+		android:textColor="@color/color222"
+		android:textSize="18sp"
+		android:textStyle="bold" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:lineSpacingExtra="4dp"
+		android:text="寮：网易双平台：结伴同游---晴歌与诗丶\n群号：602699669\n作者：B站-两心无间---天胡赌狗丶"
+		android:textColor="@color/color222"
+		android:textSize="14sp" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="32dp"
+		android:text="Tips:"
+		android:textColor="@color/color222"
+		android:textSize="16sp"
+		android:textStyle="bold" />
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:lineSpacingExtra="4dp"
+		android:text="请使用御魂导出器导出御魂，将生成的文件导入手机。\n初次使用，请先导入御魂，导出的御魂貌似只包含+15，其余被过滤掉了"
+		android:textColor="@color/color666" />
+
+	<Button
+		android:id="@+id/btn_import_yuhun"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="32dp"
+		android:text="导入御魂" />
+
+	<TextView
+		android:id="@+id/tv_info"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:text="请先导入御魂"
+		android:textColor="@color/color222" />
+
+	<Button
+		android:id="@+id/btn_calculate_yuhun"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="32dp"
+		android:text="导入御魂成功后，点我" />
+
+</LinearLayout>

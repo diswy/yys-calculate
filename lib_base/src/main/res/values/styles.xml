@@ -1,0 +1,15 @@
+<resources>
+
+    <!--透明状态栏主题以及6.0以后深色状态栏字体代码备份-->
+    <!--make status bar transparent and make content fill it -->
+    <!--<style name="AppTheme.Translucent" parent="Theme.AppCompat.Light.NoActionBar">-->
+        <!--<item name="android:windowTranslucentStatus">false</item>-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+        <!--<item name="android:statusBarColor">#00000000</item>-->
+    <!--</style>-->
+    <!--dark front for status bar-->
+    <!--<style name="AppTheme.Translucent.Light" parent="AppTheme.Translucent">-->
+        <!--<item name="android:windowLightStatusBar">true</item>-->
+    <!--</style>-->
+
+</resources>

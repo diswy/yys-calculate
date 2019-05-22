@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <!--新手指导蒙层颜色-->
+    <color name="shadow">#cc222222</color>
+    <color name="color222">#222222</color>
+    <color name="color666">#666666</color>
+</resources>

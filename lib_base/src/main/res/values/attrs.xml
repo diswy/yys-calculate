@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FancyButton">
+        <attr name="fb_shape" format="enum">
+            <enum name="rect" value="101" />
+            <enum name="rounded" value="102" />
+            <enum name="oval" value="103" />
+        </attr>
+        <attr name="fb_border_type" format="enum">
+            <enum name="line" value="201" />
+            <enum name="dash" value="202" />
+        </attr>
+        <attr name="fb_border_width" format="dimension" />
+        <attr name="fb_corner_radius" format="dimension" />
+        <attr name="fb_border_color" format="color" />
+        <attr name="fb_solid_normal" format="color" />
+        <attr name="fb_solid_pressed" format="color" />
+        <attr name="fb_un_enable_color" format="color" />
+        <attr name="fb_ripple" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FancyGroup">
+        <attr name="fg_shape" format="enum">
+            <enum name="rect" value="101" />
+            <enum name="rounded" value="102" />
+            <enum name="oval" value="103" />
+        </attr>
+        <attr name="fg_border_type" format="enum">
+            <enum name="line" value="201" />
+            <enum name="dash" value="202" />
+        </attr>
+        <attr name="fg_border_width" format="dimension" />
+        <attr name="fg_corner_radius" format="dimension" />
+        <attr name="fg_border_color" format="color" />
+        <attr name="fg_solid_normal" format="color" />
+        <attr name="fg_solid_pressed" format="color" />
+        <attr name="fg_ripple" format="boolean" />
+        <attr name="fg_only_top_corner" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FancyText">
+        <attr name="ft_color_pressed" format="color" />
+        <attr name="ft_color_normal" format="color" />
+    </declare-styleable>
+
+</resources>

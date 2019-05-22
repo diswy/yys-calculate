@@ -1,0 +1,103 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.hujiang.android-aspectjx'
+
+android {
+    compileSdkVersion build_versions.compile_sdk
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            buildConfigField("boolean", "SHOW_LOG", "false")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            buildConfigField("boolean", "SHOW_LOG", "true")
+            minifyEnabled false
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    kapt {
+        generateStubs = true
+        arguments {
+            arg("AROUTER_MODULE_NAME", project.getName())
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api deps.support.app_compat
+    api deps.support.recyclerview
+    api deps.support.constraint_layout
+    api deps.kotlin.stdlib
+    api deps.lifecycle.runtime
+    api deps.lifecycle.extensions
+    api deps.room.runtime
+    api deps.room.rxjava2
+    api deps.architecture.navigation_fragment
+    api deps.architecture.navigation_ui
+    api deps.alibaba.arouter_api
+    api deps.anko.commons
+    api deps.anko.design
+    api deps.retrofit.runtime
+    api deps.retrofit.gson
+    api deps.retrofit.rx2
+    api(deps.glide.core) {
+        exclude group: "com.android.support"
+    }
+    api deps.dagger2.core
+    api deps.rxjava2.core
+    api deps.rxjava2.android
+
+    // 阿里热更新
+    api 'com.aliyun.ams:alicloud-android-hotfix:3.2.8'
+
+    debugApi 'com.readystatesoftware.chuck:library:1.1.0'
+    releaseApi 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+    debugApi 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    // Optional, if you use support library fragments:
+    debugApi 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
+    releaseApi 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    // refresh
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-andx-1'
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-andx-1'
+    // brvah
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
+    // Logger
+    api 'com.orhanobut:logger:2.2.0'
+    // AgentWeb
+    api 'com.just.agentweb:agentweb:4.0.2'
+    // Lottie
+    api 'com.airbnb.android:lottie:2.8.0'
+    // CircleImageView
+    api 'de.hdodenhof:circleimageview:3.0.0'
+    // 骨架屏
+    api 'com.ethanhua:skeleton:1.1.2'
+    api 'io.supercharge:shimmerlayout:2.1.0'
+    // 总线
+    api 'com.jeremyliao:live-event-bus-x:1.4.0'
+    // 权限
+    api 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+    kapt deps.kapt.arouter_compiler
+    kapt deps.kapt.databinding_compiler
+    kapt deps.kapt.glide
+    kapt deps.kapt.dagger2
+    kapt deps.kapt.room
+}
