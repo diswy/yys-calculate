@@ -58,10 +58,17 @@
 		android:textColor="@color/color222" />
 
 	<Button
-		android:id="@+id/btn_calculate_yuhun"
+		android:id="@+id/btn_go_yuhun"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="32dp"
-		android:text="导入御魂成功后，点我" />
+		android:layout_marginTop="8dp"
+		android:text="御魂计算" />
+
+	<Button
+		android:id="@+id/btn_big_look"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:text="御魂放大镜" />
 
 </LinearLayout>

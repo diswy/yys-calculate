@@ -8,9 +8,12 @@ import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.tbruyelle.rxpermissions2.RxPermissions
+import com.yys.king_of_europe.fu.ui.BigLookActivity
+import com.yys.king_of_europe.fu.ui.YuHunActivity
 import com.yys.king_of_europe.fu.utils.FileHelper
 import com.yys.king_of_europe.fu.viewmodel.YuHunViewModel
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import xiaofu.lib.base.activity.BaseActivity
 
@@ -30,6 +33,10 @@ class MainActivity : BaseActivity() {
             tv_info.text = "御魂加载成功，当前+15御魂数量：${it.size}"
         })
 
+        yysModel.queryYuHunAll().observe(this, Observer {
+            tv_info.text = "你已经导入过御魂，当前+15御魂数量：${it.size}"
+        })
+
     }
 
     override fun bindListener() {
@@ -37,8 +44,12 @@ class MainActivity : BaseActivity() {
             doImportYuHun()
         }
 
-        btn_calculate_yuhun.setOnClickListener {
+        btn_go_yuhun.setOnClickListener {
+            startActivity<YuHunActivity>()
+        }
 
+        btn_big_look.setOnClickListener {
+            startActivity<BigLookActivity>()
         }
 
     }
